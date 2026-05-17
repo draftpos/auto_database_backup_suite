@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="database_restore_view_form" model="ir.ui.view">
+        <field name="name">database.restore.view.form</field>
+        <field name="model">database.restore</field>
+        <field name="arch" type="xml">
+            <form string="Restore Database">
+                <group class="oe_title">
+                    <field name="db_name" placeholder="New Database Name" required="1"/>
+                    <field name="db_master_pwd" password="True" placeholder="Master Password" required="1"/>
+                </group>
+                <footer>
+                    <button string="Restore (Standard)" name="action_restore_database"
+                            type="object" class="btn-primary"/>
+                    <button string="Restore (Direct - Recommended)" 
+                            name="action_restore_database_direct"
+                            type="object" class="btn-primary"
+                            invisible="backup_location != 'Local Storage'"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

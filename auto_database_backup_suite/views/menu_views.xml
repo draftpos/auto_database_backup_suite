@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Main Suite Menu -->
+    <menuitem id="menu_backup_suite_root" 
+              name="Database Backup Suite" 
+              sequence="5"/>
+    
+    <!-- Backup Configuration (from auto_database_backup) -->
+    <menuitem id="menu_backup_config" 
+              parent="menu_backup_suite_root" 
+              name="Backup Configuration" 
+              sequence="10"
+              action="auto_database_backup.db_backup_configure_action"/>
+    
+    <!-- Restore Manager (from odoo_database_restore_manager) -->
+    <menuitem id="menu_restore_manager" 
+              parent="menu_backup_suite_root" 
+              name="Restore Manager" 
+              sequence="20"
+              action="odoo_database_restore_manager.database_manager_action"/>
+    
+    <!-- Settings -->
+    <menuitem id="menu_backup_settings" 
+              parent="menu_backup_suite_root" 
+              name="Backup Settings" 
+              sequence="30"
+              action="base.action_general_configuration"/>
+</odoo>
