@@ -1,0 +1,34 @@
+﻿# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# All images and media
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.ico
+*.svg
+*.mp4
+*.webm
+*.gif
+
+# Static assets (exclude everything)
+static/description/assets/
+static/src/img/
+
+# Backups
+*.zip
+*.tar
+*.gz
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Temp files
+*.tmp
+*.log
